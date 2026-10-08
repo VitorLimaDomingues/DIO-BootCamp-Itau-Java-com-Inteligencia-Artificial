@@ -166,3 +166,18 @@ public class Main {
     }
 }
 ```
+
+## Trabalhando com operadores aritméticos 
+
+- soma = "+"
+- subtração = "-"
+- divisão = "/"
+- multiplicação = "*"
+
+## Some annotations
+
+Em uma linha de print, quando usar concatenação, utilizar o () para informar o java que você quer fazer uma operação e não concatenação
+
+Ao usar o operador de divisão, é sempre recomedado usar tipos primitivos que representem valores decimais {double || float}
+
+*paramos em porcentagem*
