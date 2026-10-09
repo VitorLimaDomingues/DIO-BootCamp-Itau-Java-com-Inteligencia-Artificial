@@ -86,7 +86,7 @@ public class Main {
 }
 ```
 
-## Trabalhando com Operadores de Atribuição e Lógicos parte 1
+## Trabalhando com Operadores de Atribuição e Lógicos
 
 1. Sinal de igual "=" significa atribuição e/ou recebe
 2. Sinal de "diferente de" "!=" significa que a variável está analisando se o valor requisitado é diferente do que a estrutura pede.
@@ -180,4 +180,60 @@ Em uma linha de print, quando usar concatenação, utilizar o () para informar o
 
 Ao usar o operador de divisão, é sempre recomedado usar tipos primitivos que representem valores decimais {double || float}
 
-*paramos em porcentagem*
+Os "()" priorizam algumas coisas como operações
+
+**Classe Math**:
+
+- Math.sqrt(variável) para raiz quadrada
+- Math.pow(variável, number) para potência
+
+Em java, você só consegue fazer operações de incremento e decremento, isso significa que você só pode fazer "++variavel" ou "--variavel". Não é possível fazer outros como "//"WW ou "**". Se o operador for à direita "variavel++" ou "variavel--" ele funciona, mas só é atribuído ou decrementado na próxima linha.
+
+OBS.: em algumas linguagens como **JavaScript**, é possível fazer "**", é lido como potência, mas em **Java** não... quem sabe um dia?
+
+## Código de exemplo dessa aula
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+
+        // 1. Primeira demonstração
+        // System.out.print("Informe o primeiro número: ");
+        // var value = scanner.nextInt(); caso trabalhe com decimais, é recomendado que altere para nextFloat
+        // System.out.print("Informe o segundo número: ");
+        // var value2 = scanner.nextInt(); caso trabalhe com decimais, é recomendado que altere para nextFloat
+        // System.out.println(value + "" + value2 + "=" + (value + value2)); Exemplo com concatenação
+        // System.out.printf("%s + %s = %s\n", value, value2, value + value2); Exemplo com operação de adição
+        // System.out.printf("%s - %s = %s\n", value, value2, value - value2); Exemplo com operação de subtração
+        // System.out.printf("%s / %s = %s\n", value, value2, value / value2); Exemplo com operação de divisão
+        // System.out.printf("%s * %s = %s\n", value, value2, value * value2); Exemplo com operação de multiplicação
+        // System.out.printf("%s %% %s = %s\n", value, value2, value % value2); Exemplo com operação de porcentagem
+
+        // 2. Segunda demonstração
+//        var value = 5;
+//        // value = value + 12; funciona
+//        value += 12; // forma mais resumida de fazer a operação acima.
+//        System.out.println(value);
+
+        // 3. Terceira demonstração
+//        System.out.print("Informe o primeiro número: ");
+//        var value1 = scanner.nextInt();
+//        System.out.printf("A raiz quadrada de %s é %s\n", value1, Math.sqrt(value1)); Exemplo de raíz quadrada
+//        System.out.printf("A potência de %s é %s\n", value1, Math.pow(value1, 2)); Exemplo de potência (ao quadrado)
+//        System.out.printf("A potência de %s é %s\n", value1, Math.pow(value1, 2)); Exemplo de potência (ao cubo)
+
+        // 4. Quarta demonstração
+        var value = 50;
+        System.out.println(++value); // Operador de incremento
+        System.out.println(--value); // Operador de decremento
+    //    System.out.println(value++); // Operador de incremento, porém na direita. Isso significa que ele faz a atribuição, mas só executa na próxima linha
+    //    System.out.println(value--); // Operador de decremento, porém na direita. Isso significa que ele faz a decremental, mas só executa na próxima linha
+        System.out.println(value);
+    }
+}
+```
+
+## Trabalhando com Operadores Bitwise (Bit-a-Bit)
