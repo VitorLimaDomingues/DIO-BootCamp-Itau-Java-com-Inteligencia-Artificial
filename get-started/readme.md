@@ -237,3 +237,25 @@ public class Main {
 ```
 
 ## Trabalhando com Operadores Bitwise (Bit-a-Bit)
+Geralmente, os Bitwise operators são utilizados com os tipos:
+- Long
+- int
+- short
+- byte
+- var
+
+### Some Annotations
+
+- | = orBitwise (Retorna 1 se pelo menos um dos bits comparados for 1)
+- & = andBitwise (Retorna 1 somente se ambos os bits comparados forem 1)
+- ^ = xorBitwise (Retorna 1 se os bits comparados forem diferentes)
+- ~ = complementBitwise (Inverte todos os bits: 0 vira 1 e 1 vira 0)
+- << = leftShift (Desloca os bits para a esquerda, preenchendo com 0 à direita)
+- ">>" = signedRightShift (Desloca os bits para a direita, preservando o bit de sinal: 0 para positivos e 1 para negativos)
+- ">>>" = unsignedRightShift (Desloca os bits para a direita, sempre preenchendo com 0 à esquerda)
+
+
+- 0 = false
+- 1 = true
+
+Exemplo: 101 + 110 = (1 + 1 = true = 1. 0 + 1 = true = 1. 1 + 0 = true = 1.), resultado = 111
