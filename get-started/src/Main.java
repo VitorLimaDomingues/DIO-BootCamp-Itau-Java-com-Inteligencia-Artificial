@@ -74,7 +74,7 @@ public class Main {
 //        11111111111111111111111111111001 < o que o complement fez (inverteu)
 //        */
 
-//        5. Quinta demonstração shiftOperators << "Desloca o valor para esquerda dependendo do valor"
+//        5. Quinta demonstração shiftOperators << "Desloca o valor para esquerda dependendo do valor da quantidade"
 //        var value1 = 9;
 //        var binary1 = Integer.toBinaryString(value1);
 //        System.out.printf("Primeiro número da operação %s (representação binária %s)\n", value1, binary1);
@@ -114,7 +114,7 @@ public class Main {
 //            não alteram o valor do número.
 //*/
 
-        // 7. Sétima demonstração unsignedRightShift >>>
+        // 7. Sétima demonstração unsignedRightShift >>> "Desloca o valor para direita dependendo do valor da quantidade"
         var value1 = 12;
         var binary1 = Integer.toBinaryString(value1);
         System.out.printf("Primeiro número da operação %s (representação binária %s)\n", value1, binary1);
