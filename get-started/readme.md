@@ -452,3 +452,100 @@ public class Main {
 Nesses tipos de estrutura, usar sc.nextLine(); após uma leitura de nextInt é essencial para limpar o "buffer". O que acontece é que quando você digita o número e aperta enter, o programa consome o valor, mas não o quebra-linha "\n" E isso acarreta em mais pra frente no código, quando aparece um nextLine(); ele consome esse "\n" do nextInt(); e não lhe permite inserir o dado pedido. 
 
 # Estruturas de Controle em Java
+
+## Estrutura condicional If else e else if
+
+Estrutura de condição em Java:
+- if (se) = Permite executar uma condição
+- else (se não) = Caso a condição if ou else if não seja atendida, a else executa
+- else if (se não se) = Permite encadear as condições para ter mais que uma
+
+## Some Annotations
+
+Você pode trabalhar com if na mesma linha sem utilizar "{}", mas caso queira trabalhar com demais linhas já é obrigatório usar "{}" chaves.
+
+Elvis Operator: Verifica se a variável e true, se for, executa tudo que está do lado esquerdo dos ":" se não for, executa o que está do lado direito dos ":"
+
+Diferença do Elvis para o if: com o if, você pode executar códigos dentro dos seus blocos "{}", tanto com o if, else if e else. O Elvis operator, você trabalha com uma linha fazendo atribuição.
+
+Motivo desse nome? Por causa das dos símbolos "?:" juntos, lembrarem o topetão do Elvis.
+
+## Código de exemplo dessa aula
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+//        1. Primeira demonstração
+//        System.out.print("Informe o seu nome: ");
+//        var name = scanner.next();
+//        System.out.print("Informe sua idade: ");
+//        var age = scanner.nextInt();
+//        System.out.print("Você é emancipado (s/n): ");
+//        var isEmancipated = scanner.next().equalsIgnoreCase("s"); // equalsIgnoredCase ignora se o usuário digitou o valor em Maíusculo.
+//
+//        if (age >= 18) {
+//            System.out.printf("%s. Você tem %s anos e pode dirigir \n", name, age);
+//        } else if (age >= 16 && isEmancipated) {
+//            System.out.printf("%s. Apesar de você ter %s anos, você é emancipado e pode dirigir. \n", name, age);
+//        } else {
+//            System.out.printf("%s. Você não pode dirigir. \n", name);
+//        }
+//
+//        System.out.println("Fim da execução");
+
+//        2. Segunda demonstração
+//        System.out.print("Informe o seu nome: ");
+//        var name = scanner.next();
+//        System.out.print("Informe sua idade: ");
+//        var age = scanner.nextInt();
+//        System.out.print("Você é emancipado (s/n): ");
+//        var isEmancipated = scanner.next().equalsIgnoreCase("s"); // equalsIgnoredCase ignora se o usuário digitou o valor em Maíusculo.
+//
+//        // uma possibilidade é também fazer var canDrive = (age >= 18) || (age >= 16 && isEmancipated); if (canDrive) {mensagem}
+//        if ((age >= 18) || (age >= 16 && isEmancipated)) {
+//            System.out.printf("%s. Você pode dirigir! \n", name);
+//        } else {
+//            System.out.printf("%s. Você não pode dirigir!", name);
+//        }
+//
+//        System.out.println();
+//        System.out.println("Fim da execução");
+
+//        3. Terceira demonstração
+//        System.out.print("Informe o seu nome: ");
+//        var name = scanner.next();
+//        System.out.print("Informe sua idade: ");
+//        var age = scanner.nextInt();
+//        System.out.print("Você é emancipado (s/n): ");
+//        var isEmancipated = scanner.next().equalsIgnoreCase("s"); // equalsIgnoredCase ignora se o usuário digitou o valor em Maíusculo.
+//
+//        var canDrive = (age >= 18) || (age >= 16 && isEmancipated);
+//        var message = "";
+//        if (canDrive) {
+//            message = name + ". Você pode dirigir! \n";
+//        } else {
+//            message = name + ". Você não pode dirigir!";
+//        }
+//
+//        System.out.println(message);
+//        System.out.println("Fim da execução");
+
+        System.out.print("Informe o seu nome: ");
+        var name = scanner.next();
+        System.out.print("Informe sua idade: ");
+        var age = scanner.nextInt();
+        System.out.print("Você é emancipado (s/n): ");
+        var isEmancipated = scanner.next().equalsIgnoreCase("s"); // equalsIgnoredCase ignora se o usuário digitou o valor em Maíusculo.
+
+        var canDrive = (age >= 18) || (age >= 16 && isEmancipated);
+
+        var message = canDrive ? name + ". Você pode dirigir \n" : name + ". Você não pode dirigir \n"; // Elvis Operator
+
+        System.out.println(message);
+        System.out.println("Fim da execução");
+    }
+}
+```
