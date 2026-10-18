@@ -450,3 +450,5 @@ public class Main {
 ```
 
 Nesses tipos de estrutura, usar sc.nextLine(); após uma leitura de nextInt é essencial para limpar o "buffer". O que acontece é que quando você digita o número e aperta enter, o programa consome o valor, mas não o quebra-linha "\n" E isso acarreta em mais pra frente no código, quando aparece um nextLine(); ele consome esse "\n" do nextInt(); e não lhe permite inserir o dado pedido. 
+
+# Estruturas de Controle em Java
