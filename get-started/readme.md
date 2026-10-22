@@ -551,3 +551,97 @@ public class Main {
 ```
 
 ## Estrutura Condicional Switch case
+
+O switch case é uma estrutura condicional usada para executar diferentes blocos de código de acordo com o valor de uma variável ou expressão.
+Ela é uma alternativa ao if e else if, principalmente quando precisamos comparar uma mesma variável com vários valores possíveis.
+
+- **`switch:`** recebe o valor que será analisado.
+- **`case:`** Define cada valor possível.
+- **`break:`** encerra o switch, evitando que os próximos casos sejam executados.
+- **`default:`** executa caso nenhum dos valores anteriores corresponda.
+
+### Diferença entre Switch Case e If/Else
+- **`if/else:`** É mais flexível, pois permite trabalhar com condições complexas, como >, <, >=, && e ||.
+- switch case: É mais organizado e legível quando precisamos comparar uma expressão com vários valores específicos.
+
+### Formas de utilizar Switch case
+
+O `switch` possui diferentes sintaxes no Java:
+
+- **Switch Tradicional (`case`):** utiliza `break` para interromper a execução dos casos.
+- **Switch moderno (`case ->`):** utiliza setas, dispensando o `break` e permitindo uma sintaxe mais simples.
+- **Switch com blocos `{}`:** permite executar várias instruções dentro de um mesmo `case`, incluindo condições, variáveis e cálculos.
+- **Switch com expressão:** permite produzir um valor e armazená-lo em uma variável
+- **`yield`:** produz o valor de um bloco `{}` quando o `switch` é utilizado como expressão
+- **Múltiplos valores (`case 1, 7`):** permite que diferentes valores executem o mesmo caso
+
+**Observação:** quando o `case ->` retorna um valor diretamente, não é necessário usar `yield`. Ele é necessário quando queremos produzir um valor a partir de um bloco `{}`
+
+
+## Código de exemplo dessa aula
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+//        1. Primeira demonstração de switch case
+//        System.out.print("Informe um número de 1 até 7: ");
+//        var option = scanner.nextInt();
+//        scanner.nextLine();
+//        switch (option) {
+//            case 1:
+//            case 7:
+//                System.out.println("Fim de semana uhull \\o/");
+//                break;
+//            case 2:
+//                System.out.println("Segunda");
+//                break;
+//            case 3:
+//                System.out.println("Terça");
+//                break;
+//            case 4:
+//                System.out.println("Quarta");
+//                break;
+//            case 5:
+//                System.out.println("Quinta");
+//                break;
+//            case 6:
+//                System.out.println("Sexta");
+//                break;
+//            default:
+//                System.out.println("Opção inválida!");
+//       }
+//        2. Segunda demonstração
+//        System.out.print("Informe um número de 1 até 7: ");
+//        var option = scanner.nextInt();
+//        switch (option) {
+//            case 1 -> System.out.println("Domingo");
+//            case 2 -> System.out.println("Segunda");
+//            case 3 -> System.out.println("Terça");
+//            case 4 -> System.out.println("Quarta");
+//            case 5 -> System.out.println("Quinta");
+//            case 6 -> System.out.println("Sexta");
+//            case 7 -> System.out.println("Sábado");
+//            default -> System.out.println("Opção inválida!");
+//        }
+//      3. Terceira demonstração
+        System.out.print("Informe um número de 1 até 7: ");
+        var option = scanner.nextInt();
+        var message = switch (option) {
+            case 1, 7 -> {
+                var day = option == 1 ? "Domingo" : "Sábado";
+                yield String.format("Hoje é %s, fim de semana uhuull \\o/", day);
+            }
+            case 2 -> ("Segunda");
+            case 3 -> ("Terça");
+            case 4 -> ("Quarta");
+            case 5 -> ("Quinta");
+            case 6 -> ("Sexta");
+            default -> ("Opção inválida!");
+        };
+        System.out.println(message);
+    }
+}
+```
