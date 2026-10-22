@@ -549,3 +549,5 @@ public class Main {
     }
 }
 ```
+
+## Estrutura Condicional Switch case
