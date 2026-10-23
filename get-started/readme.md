@@ -653,3 +653,50 @@ instruções. Ela é especialmente útil quando sabemos a quantidade de repetiç
 que define o valor inicial da variável de controle; **condição**, que determina até quando o laço será executado; e **atualização**, que modifica essa variável
 a cada repetição. Dessa forma, o **`for`** torna o código mais organizado, legível e fácil de manter, sendo muito utilizado em contagens, cálculos e percorrimento
 de coleções de dados.
+
+**`for (;;)`** = Como não passou argumentos, ele roda infinito (semelhante ao while), para fazer parar tem que utilizar o método "equalsIgnoreCase('string aqui')"
+
+
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+//      1. Primeira demonstração
+//      for (;;) {
+//          System.out.print("Digite um nome: ");
+//          var name = scanner.next();
+//
+//          if (name.equalsIgnoreCase("exit")) break;
+//
+//          System.out.println(name);
+//      }
+
+//      2. Segunda demonstração
+//      for (var i = 1; i <= 100; i++) { // forma comum de utilizar for | Também pode ser manipulado de muitas formas "i >= 0" ou "i += 2" ou "i--"
+//          if (i % 2 == 0) {
+//              continue; // "break" interrompe, "continue" continua o código.
+//          }
+//      }
+//
+//            System.out.println(i);
+///
+//      3. Terceira demonstração
+//      for (var i = 0; i <= args.length; i++) {
+//           System.out.println(args[i]);
+//      }
+//
+//      4. Quarta demonstração
+//      for (var arg : args) {
+//          System.out.println(arg);
+//      }
+
+        for (var i = 0; i < args.length; i++) {
+            System.out.println(i + " - " + args[i]);
+        }
+
+    }
+}
+```
