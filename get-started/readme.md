@@ -645,3 +645,11 @@ public class Main {
     }
 }
 ```
+
+## Estrutura de Repetição for
+
+A estrutura de repetição **`for`** em Java tem como objetivo automatizar a execução de um bloco de código várias vezes, evitando a repetição manual de 
+instruções. Ela é especialmente útil quando sabemos a quantidade de repetições necessárias. Seu funcionamento é baseado em três componentes: **inicialização**,
+que define o valor inicial da variável de controle; **condição**, que determina até quando o laço será executado; e **atualização**, que modifica essa variável
+a cada repetição. Dessa forma, o **`for`** torna o código mais organizado, legível e fácil de manter, sendo muito utilizado em contagens, cálculos e percorrimento
+de coleções de dados.
