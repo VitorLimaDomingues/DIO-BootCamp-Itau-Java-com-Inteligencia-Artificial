@@ -702,3 +702,62 @@ public class Main {
 ```
 
 ## Estrutura de repetição while e do while
+
+### while:
+
+A estrutura de repetição **`while`** em **Java** permite executar um bloco de código repetidamente enquanto uma
+determinada condição for verdadeira. Diferente do **`for`**, que costuma ser utilizado quando conhecemos
+a quantidade de repetições, o **`while`** é especialmente útil quando não sabemos exatamente quantas vezes
+uma operação precisará ser executada. Sua condição é verificada antes de cada execução, o que significa
+que o bloco de código pode não ser executado nenhuma vez, caso a condição inicial seja falsa.
+
+### do while:
+
+A estrutura de repetição **`do while`** em **Java** também permite executar um bloco de código repetidamente
+enquanto uma condição for verdadeira. Sua principal diferença em relação ao **`while`** está no momento da
+verificação da condição, que ocorre após a execução do bloco. Dessa forma, o **`do while`** garante que
+as instruções sejam executadas pelo menos uma vez, independentemente da condição inicial. Essa estrutura
+é especialmente útil em situações nas quais precisamos realizar uma operação antes de decidir se ela
+deverá ser repetida.
+
+### Resumo das diferenças:
+
+- **`for`**: geralmente utilizado quando sabemos a quantidade de repetições
+- **`while`**: verifica a condição antes de executar o bloco, podendo não executar nenhuma vez.
+- **`do while`**: verifica a condição depois de executar o bloco, garantindo pelo menos uma execução
+
+## Código de exemplo dessa aula
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+//        1. Primeira demonstração
+//        var name = "";
+//        while (!name.equals("exit")) {
+//            System.out.print("Informe um nome: ");
+//            name = scanner.nextLine();
+//            System.out.println(name);
+//        }
+
+//        2. Segunda demonstração
+//        var name = "";
+//        while (true) {
+//            System.out.print("Informe um nome: ");
+//            name = scanner.nextLine();
+//            System.out.println(name);
+//
+//            if (name.equalsIgnoreCase("exit")) break;
+//        }
+
+        var name = "exit";
+        do {
+            System.out.print("Informe um nome: ");
+            name = scanner.nextLine();
+            System.out.println(name);
+
+        } while (!name.equalsIgnoreCase("exit"));
+    }
+}
+```
